@@ -11,6 +11,7 @@ public class Test {
         Hero sword =new BloodsuckingSword(shield);
         System.out.println("你的攻击力是"+sword.aggressiveNumber());
         System.out.println("你的技能是"+sword.skill());
+
     }
 
 
