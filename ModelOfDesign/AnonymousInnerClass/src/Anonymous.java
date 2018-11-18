@@ -5,8 +5,10 @@
  * @create: 2018-11-18 16:25
  */
 
+import javax.imageio.stream.MemoryCacheImageInputStream;
+
 /**
- * 匿名内部类直接new的接口，没有类名---》无法定义构造器
+ * 匿名内部类直接new的接口或者抽象类，没有类名---》无法定义构造器
  *内部类比外部类可以多用三个修饰符： private protected static
  */
 interface report{
@@ -19,7 +21,6 @@ public class Anonymous {
     public static void main(String[] args) {
         Anonymous anonymous = new Anonymous();
         anonymous.getNum( new report(){
-
             @Override
             public int NumOfPeople() {
                 return 100;
