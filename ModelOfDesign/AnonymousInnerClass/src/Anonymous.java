@@ -7,7 +7,7 @@
 
 /**
  * 匿名内部类直接new的接口，没有类名---》无法定义构造器
- *
+ *内部类比外部类可以多用三个修饰符： private protected static
  */
 interface report{
     public int  NumOfPeople();
@@ -28,3 +28,8 @@ public class Anonymous {
 
     }
 }
+
+class hello { }
+/* 以下报错
+private class hello {}
+*/
