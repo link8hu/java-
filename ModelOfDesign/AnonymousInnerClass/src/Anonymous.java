@@ -1,0 +1,30 @@
+/**
+ * @program: ModelOfDesign
+ * @description: 匿名内部类demo
+ * @author: Mr.Hu
+ * @create: 2018-11-18 16:25
+ */
+
+/**
+ * 匿名内部类直接new的接口，没有类名---》无法定义构造器
+ *
+ */
+interface report{
+    public int  NumOfPeople();
+}
+public class Anonymous {
+    private void getNum(report report){
+        System.out.println("今年公司一共"+report.NumOfPeople()+"人");
+    }
+    public static void main(String[] args) {
+        Anonymous anonymous = new Anonymous();
+        anonymous.getNum( new report(){
+
+            @Override
+            public int NumOfPeople() {
+                return 100;
+            }
+        });
+
+    }
+}
