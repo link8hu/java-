@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BridgeModel/BridgeModel.iml" filepath="$PROJECT_DIR$/BridgeModel/BridgeModel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FactoryModel/FactoryModel.iml" filepath="$PROJECT_DIR$/FactoryModel/FactoryModel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ModelOfDesign.iml" filepath="$PROJECT_DIR$/.idea/ModelOfDesign.iml" />
+    </modules>
+  </component>
+</project>
