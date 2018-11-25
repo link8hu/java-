@@ -1,7 +1,7 @@
 import java.io.*;
 
 /**
- * @program: ModelOfDesign
+ * @Progect: ModelOfDesign
  * @description: 等待克隆对象
  * @author: Mr.Hu
  * @create: 2018-11-18 21:06
@@ -9,7 +9,7 @@ import java.io.*;
 public class HomeWork implements Cloneable , Serializable{
     private static final long serialVersionUID = 7362717931684462047L;
     String couse;             //作业名
-    int time;                 //作业提交时间
+    private int time;                 //作业提交时间
 
 
     /***实现浅克隆方法******/
@@ -23,10 +23,10 @@ public class HomeWork implements Cloneable , Serializable{
         return a;
     }
     /***实现深克隆方法******/
-    public HomeWork DeepClone(){
+    HomeWork DeepClone(){
         HomeWork a = null;
         try {
-            /**将对象序列化成流 而序列化时原对象仍在jVM中，所以利用这个特性可以实现深度拷贝**/
+            /*将对象序列化成流 而序列化时原对象仍在jVM中，所以利用这个特性可以实现深度拷贝*/
             ByteArrayOutputStream bao = new ByteArrayOutputStream();
             ObjectOutputStream oot =new ObjectOutputStream(bao);
             oot.writeObject(this);
@@ -34,9 +34,7 @@ public class HomeWork implements Cloneable , Serializable{
             ByteArrayInputStream bai = new ByteArrayInputStream(bao.toByteArray());
             ObjectInputStream obi = new ObjectInputStream(bai);
             a = (HomeWork) obi.readObject();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         return a;
@@ -46,7 +44,7 @@ public class HomeWork implements Cloneable , Serializable{
         return couse;
     }
 
-    public void setCouse(String couse) {
+    void setCouse(String couse) {
         this.couse = couse;
     }
 
@@ -54,7 +52,7 @@ public class HomeWork implements Cloneable , Serializable{
         return time;
     }
 
-    public void setTime(int time) {
+    void setTime(int time) {
         this.time = time;
     }
 
