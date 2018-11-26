@@ -7,7 +7,7 @@
 public class AdaPter implements ChinaCharge{
     /**
      *适配器先实现中国标准的接口，这样才能供电。
-     * 然后提供一个本身的功能（属性）pad充电口 padCharge放在构造函数里面，代表生产时要确定转换成哪种标准
+     * 然后提供一个本身的功能（属性）pad充电口 padCharge放在构造函数里面，代表生产时要确定转换成哪种标准 -- 相当于组合（复合）
      */
     /*将国标供电口转换为香港标准*/
     PadCharge padCharge=null;
