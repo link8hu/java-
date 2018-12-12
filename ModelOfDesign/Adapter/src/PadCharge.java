@@ -6,5 +6,5 @@
  */
 public interface PadCharge {
     /*充电功能*/
-    public void charge();
+    public void Padcharge();
 }

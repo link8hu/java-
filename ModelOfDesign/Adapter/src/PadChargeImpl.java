@@ -6,7 +6,7 @@
  */
 public class PadChargeImpl implements PadCharge {
     @Override
-    public void charge() {
+    public void Padcharge() {
         System.out.println("香港充电接口连接成功，我正在给pad充电");
     }
 }

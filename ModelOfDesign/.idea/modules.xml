@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/BridgeModel/BridgeModel.iml" filepath="$PROJECT_DIR$/BridgeModel/BridgeModel.iml" />
       <module fileurl="file://$PROJECT_DIR$/FactoryModel/FactoryModel.iml" filepath="$PROJECT_DIR$/FactoryModel/FactoryModel.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ModelOfDesign.iml" filepath="$PROJECT_DIR$/.idea/ModelOfDesign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Observer/Observer.iml" filepath="$PROJECT_DIR$/Observer/Observer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Proxy/Proxy.iml" filepath="$PROJECT_DIR$/Proxy/Proxy.iml" />
       <module fileurl="file://$PROJECT_DIR$/StrategyModel/StrategyModel.iml" filepath="$PROJECT_DIR$/StrategyModel/StrategyModel.iml" />
       <module fileurl="file://$PROJECT_DIR$/TemplateMethod/TemplateMethod.iml" filepath="$PROJECT_DIR$/TemplateMethod/TemplateMethod.iml" />
     </modules>
