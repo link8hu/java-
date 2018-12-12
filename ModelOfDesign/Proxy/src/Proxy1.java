@@ -4,7 +4,7 @@
  * @author: Mr.Hu
  * @create: 2018-12-12 13:35
  */
-public class Proxy implements Printable {
+public class Proxy1 implements Printable {
     private Print print;
     private String name;
     @Override
