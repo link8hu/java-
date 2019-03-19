@@ -8,7 +8,7 @@ import java.lang.reflect.Proxy;
  * @author: Mr.Hu
  * @create: 2018-12-12 16:32
  */
-public class ProxyFactory {
+public class ProxyFactory implements InvocationHandler{
     //维护一个目标对象
     private Object target;
     public ProxyFactory(Object target){
@@ -18,16 +18,14 @@ public class ProxyFactory {
         return Proxy.newProxyInstance(
                 target.getClass().getClassLoader(),
                 target.getClass().getInterfaces(),
-                new InvocationHandler() {
-                    @Override
-                    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-                        System.out.println("开始事务");
-                        //执行目标方法
-                        Object returnValue = method.invoke(target,args);
-                        System.out.println("提交事务");
-                        return returnValue;
-                    }
-                }
-        );
+                this);
+    }
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        System.out.println("开始事务");
+        //执行目标方法
+        Object returnValue = method.invoke(target,args);
+        System.out.println("提交事务");
+        return returnValue;
     }
 }

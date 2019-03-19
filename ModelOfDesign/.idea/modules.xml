@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Adapter/Adapter.iml" filepath="$PROJECT_DIR$/Adapter/Adapter.iml" />
       <module fileurl="file://$PROJECT_DIR$/BridgeModel/BridgeModel.iml" filepath="$PROJECT_DIR$/BridgeModel/BridgeModel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Command/Command.iml" filepath="$PROJECT_DIR$/Command/Command.iml" />
       <module fileurl="file://$PROJECT_DIR$/FactoryModel/FactoryModel.iml" filepath="$PROJECT_DIR$/FactoryModel/FactoryModel.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ModelOfDesign.iml" filepath="$PROJECT_DIR$/.idea/ModelOfDesign.iml" />
       <module fileurl="file://$PROJECT_DIR$/Observer/Observer.iml" filepath="$PROJECT_DIR$/Observer/Observer.iml" />

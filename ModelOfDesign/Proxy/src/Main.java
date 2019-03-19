@@ -1,3 +1,10 @@
+import sun.misc.ProxyGenerator;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 /**
  * @program: ModelOfDesign
  * @description: 代理模式 -- 实现和装饰者 模式有些相似，但是两者目的不同
@@ -8,7 +15,16 @@
  * @create: 2018-12-12 13:29
  */
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        //保存动态生成的代理类字节码文件
+        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles","true");
+        byte[]classFile = ProxyGenerator.generateProxyClass("Proxy0",ProxyFactory.class.getInterfaces());
+        File file =new File("../Proxy0.class");
+        FileOutputStream fos =new FileOutputStream(file);
+        fos.write(classFile);
+        fos.flush();
+        fos.close();
+
         /***********静态代理**********/
         Proxy1 proxy =new Proxy1();
         proxy.setBrandName("惠普打印机");
@@ -19,7 +35,6 @@ public class Main {
         System.out.println(print.getClass());
         //创建代理对象
         Printable proxy1 = (Printable)new ProxyFactory(print).getProxyInstance();
-
         proxy1.print("dong态代理");
     }
 }
